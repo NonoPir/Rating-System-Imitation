@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <div class="wrapper">
+      <div class="box">
+        <div class="image hidden">
+          <img
+            id="phone"
+            class="hidden"
+            src="./images/illustration-thank-you.svg"
+            height="150"
+            width="220"
+          />
+          <div id="rating" class="hidden">
+            <p id="value" class="hidden">You selected 4 out of 5</p>
+          </div>
+          <div class="thank">
+            <h1 id="second-header" class="hidden">Thank you!</h1>
+          </div>
+          <div class="appreciate">
+            <p id="second-p" class="hidden">
+              We appreciate you taking the time to give a rating.<br />
+              if you ever need more support, don't hesitate to<br />get in
+              touch!
+            </p>
+          </div>
+        </div>
+        <div id="hide">
+          <div class="starwrapper">
+            <img class="star" src="./design/star.png" height="30" width="30" />
+          </div>
+          <div class="header">
+            <h1>How did we do?</h1>
+          </div>
+          <div class="para">
+            <p>
+              Please let us know how we did with your support<br />request. All
+              feedback is appreciated to help us<br />improve our offering!
+            </p>
+          </div>
+          <div class="rate">
+            <button id="cir-1" style="margin-left: 55px" class="cir">1</button>
+            <button id="cir-2" class="cir">2</button>
+            <button id="cir-3" class="cir">3</button>
+            <button id="cir-4" class="cir">4</button>
+            <button id="cir-5" class="cir">5</button>
+          </div>
+          <div class="submit">
+            <button type="submit" id="sub">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Nono</a>.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
