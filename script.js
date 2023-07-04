@@ -13,11 +13,6 @@ button1.addEventListener("click", function () {
   button3.classList.remove("button-clicked");
   button4.classList.remove("button-clicked");
   button5.classList.remove("button-clicked");
-  button1.classList.add("selected");
-  button2.classList.remove("selected");
-  button3.classList.remove("selected");
-  button4.classList.remove("selected");
-  button5.classList.remove("selected");
 });
 button2.addEventListener("click", function () {
   button2.classList.add("button-clicked");
@@ -25,11 +20,6 @@ button2.addEventListener("click", function () {
   button4.classList.remove("button-clicked");
   button5.classList.remove("button-clicked");
   button1.classList.remove("button-clicked");
-  button2.classList.add("selected");
-  button1.classList.remove("selected");
-  button3.classList.remove("selected");
-  button4.classList.remove("selected");
-  button5.classList.remove("selected");
 });
 button3.addEventListener("click", function () {
   button3.classList.add("button-clicked");
@@ -37,11 +27,6 @@ button3.addEventListener("click", function () {
   button2.classList.remove("button-clicked");
   button4.classList.remove("button-clicked");
   button5.classList.remove("button-clicked");
-  button3.classList.add("selected");
-  button1.classList.remove("selected");
-  button2.classList.remove("selected");
-  button4.classList.remove("selected");
-  button5.classList.remove("selected");
 });
 button4.addEventListener("click", function () {
   button4.classList.add("button-clicked");
@@ -49,11 +34,6 @@ button4.addEventListener("click", function () {
   button2.classList.remove("button-clicked");
   button3.classList.remove("button-clicked");
   button5.classList.remove("button-clicked");
-  button4.classList.add("selected");
-  button1.classList.remove("selected");
-  button2.classList.remove("selected");
-  button3.classList.remove("selected");
-  button5.classList.remove("selected");
 });
 button5.addEventListener("click", function () {
   button5.classList.add("button-clicked");
@@ -61,11 +41,6 @@ button5.addEventListener("click", function () {
   button2.classList.remove("button-clicked");
   button3.classList.remove("button-clicked");
   button4.classList.remove("button-clicked");
-  button5.classList.add("selected");
-  button1.classList.remove("selected");
-  button2.classList.remove("selected");
-  button3.classList.remove("selected");
-  button4.classList.remove("selected");
 });
 
 document.getElementById("sub").addEventListener("click", function () {
@@ -76,15 +51,15 @@ document.getElementById("sub").addEventListener("click", function () {
   document.getElementById("rating").style.backgroundColor =
     "hsl(216, 16%, 18%)";
   document.getElementById("value").classList.remove("hidden");
-  if (button1.classList.contains("selected")) {
+  if (button1.classList.contains("button-clicked")) {
     value.textContent = "You selected 1 out of 5";
-  } else if (button2.classList.contains("selected")) {
+  } else if (button2.classList.contains("button-clicked")) {
     value.textContent = "You selected 2 out of 5";
-  } else if (button3.classList.contains("selected")) {
+  } else if (button3.classList.contains("button-clicked")) {
     value.textContent = "You selected 3 out of 5";
-  } else if (button4.classList.contains("selected")) {
+  } else if (button4.classList.contains("button-clicked")) {
     value.textContent = "You selected 4 out of 5";
-  } else if (button5.classList.contains("selected")) {
+  } else if (button5.classList.contains("button-clicked")) {
     value.textContent = "You selected 5 out of 5";
   } else value.textContent = "You selected 0 out of 5";
 });
