@@ -7,50 +7,35 @@ const button5 = document.getElementById("cir-5");
 const value = document.getElementById("value");
 const secondHeader = document.getElementById("second-header");
 const secondP = document.getElementById("second-p");
-button1.addEventListener("click", function () {
-  button1.classList.add("button-clicked");
-  button2.classList.remove("button-clicked");
-  button3.classList.remove("button-clicked");
-  button4.classList.remove("button-clicked");
-  button5.classList.remove("button-clicked");
-});
-button2.addEventListener("click", function () {
-  button2.classList.add("button-clicked");
-  button3.classList.remove("button-clicked");
-  button4.classList.remove("button-clicked");
-  button5.classList.remove("button-clicked");
-  button1.classList.remove("button-clicked");
-});
-button3.addEventListener("click", function () {
-  button3.classList.add("button-clicked");
-  button1.classList.remove("button-clicked");
-  button2.classList.remove("button-clicked");
-  button4.classList.remove("button-clicked");
-  button5.classList.remove("button-clicked");
-});
-button4.addEventListener("click", function () {
-  button4.classList.add("button-clicked");
-  button1.classList.remove("button-clicked");
-  button2.classList.remove("button-clicked");
-  button3.classList.remove("button-clicked");
-  button5.classList.remove("button-clicked");
-});
-button5.addEventListener("click", function () {
-  button5.classList.add("button-clicked");
-  button1.classList.remove("button-clicked");
-  button2.classList.remove("button-clicked");
-  button3.classList.remove("button-clicked");
-  button4.classList.remove("button-clicked");
-});
+const sub = document.getElementById("sub");
+const hide = document.getElementById("hide");
+const phone = document.getElementById("phone");
+const rating = document.getElementById("rating");
+const arr = [button1, button2, button3, button4, button5];
 
-document.getElementById("sub").addEventListener("click", function () {
-  document.getElementById("hide").classList.add("hidden");
-  document.getElementById("phone").classList.remove("hidden");
+const assignClass = function (buttons) {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      for (let j = 0; j < buttons.length; j++) {
+        if (buttons[j] === buttons[i]) {
+          buttons[j].classList.add("button-clicked");
+        } else {
+          buttons[j].classList.remove("button-clicked");
+        }
+      }
+    });
+  }
+};
+
+assignClass(arr);
+
+sub.addEventListener("click", function () {
+  hide.classList.add("hidden");
+  phone.classList.remove("hidden");
   secondHeader.classList.remove("hidden");
   secondP.classList.remove("hidden");
-  document.getElementById("rating").style.backgroundColor =
-    "hsl(216, 16%, 18%)";
-  document.getElementById("value").classList.remove("hidden");
+  rating.style.backgroundColor = "hsl(216, 16%, 18%)";
+  value.classList.remove("hidden");
   if (button1.classList.contains("button-clicked")) {
     value.textContent = "You selected 1 out of 5";
   } else if (button2.classList.contains("button-clicked")) {
